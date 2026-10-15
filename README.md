@@ -36,6 +36,21 @@ Para una campaña limitada al 20% de la cartera:
 
 Bajo los supuestos ilustrativos utilizados, limitar la campaña al 20% reduce los contactos aproximadamente un 47% respecto del máximo beneficio sin restricciones, pero conserva cerca del 85% del beneficio esperado.
 
+## Explicabilidad del modelo
+
+La importancia por permutación mide cuánto disminuye el PR-AUC cuando se desordena una variable, manteniendo las demás sin cambios.
+
+![Importancia por permutación](reports/figures/permutation_importance.png)
+
+`NumOfProducts` y `Age` son las variables con mayor aporte predictivo, seguidas por `IsActiveMember`, `Balance` y `Geography`. La importancia representa utilidad predictiva dentro del modelo y no implica una relación causal.
+
+El gráfico puede regenerarse con:
+
+```bash
+python -m financeguard.explain \
+  --data data/raw/Churn_Modelling.csv
+```
+
 ## Estructura
 
 ```text
