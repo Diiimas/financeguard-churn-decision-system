@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+.DS_Store
+catboost_info/
+data/raw/*.csv
+!data/raw/README.md
+models/*.joblib
+reports/metrics/*.json
+reports/metrics/*.csv
