@@ -115,3 +115,7 @@ El archivo original se espera en `data/raw/Churn_Modelling.csv`. Por trazabilida
 ## Autor
 
 Dimas Giménez — proyecto individual, reconstruido a partir de la entrega académica de Data Analytics / Machine Learning.
+
+## Licencia
+
+El código de este proyecto se distribuye bajo la licencia MIT. El dataset no forma parte de la distribución y debe obtenerse por separado respetando las condiciones de su fuente.
