@@ -1,10 +1,27 @@
 # FinanceGuard — Churn Decision System
 
-Proyecto de portfolio que transforma un ejercicio académico de predicción de fuga de clientes en un sistema reproducible de apoyo a decisiones de retención.
+[![CI](https://github.com/Diiimas/financeguard-churn-decision-system/actions/workflows/ci.yml/badge.svg)](https://github.com/Diiimas/financeguard-churn-decision-system/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+Sistema reproducible de machine learning para identificar clientes con riesgo de abandono y convertir sus probabilidades de churn en una política de retención ajustada a la capacidad operativa de la campaña.
 
 ## Qué resuelve
 
 El modelo estima la probabilidad de abandono de cada cliente. La salida no se limita a una clasificación: el proyecto selecciona el umbral de intervención según el costo de contactar, el valor de retener a un cliente y la efectividad esperada de la campaña.
+
+## Resultados principales
+
+- **Modelo seleccionado:** HistGradientBoosting mediante validación cruzada de 5 particiones.
+- **PR-AUC en validación:** 0,700.
+- **PR-AUC en test no utilizado durante el desarrollo:** 0,720.
+- **ROC-AUC en test:** 0,870.
+- **Lift en el 10% de mayor riesgo:** 4,13.
+- **Política operativa:** contacto máximo con el 20% de la cartera.
+- **Umbral seleccionado:** 0,325.
+- **Resultado en test:** precision de 0,642 y recall de 0,627.
+
+Con una capacidad máxima de contacto del 20%, la política identifica aproximadamente al 63% de los clientes que abandonan, concentrando los esfuerzos sobre una población con una tasa de churn considerablemente superior al promedio.
 
 ## Diseño metodológico
 
